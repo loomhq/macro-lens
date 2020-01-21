@@ -82,7 +82,7 @@ h4 {
 }
 
 .menuItem {
-  padding: var(--textBox-padding);
+  padding: var(--textBox-paddingY) var(--textBox-paddingX);
   border-radius: var(--radius-m);
   white-space: nowrap;
 }

@@ -40,7 +40,12 @@
   --color-formFieldBorder: hsla(230,7%,84%,1);
   --color-green: #2AE584;
 
-  --textBox-padding: 0.65em 0.95em;
+  --textBox-paddingY: 0.65em;
+  --textBox-paddingX: 0.95em;
+  --buttonBorderWidth: 1px;
+  --fieldBorderWidth: 2px;
+  --textBox-padding-button: calc(var(--textBox-paddingY) - var(--buttonBorderWidth)) calc(var(--textBox-paddingX) - var(--buttonBorderWidth));
+  --textBox-padding-field: calc(var(--textBox-paddingY) - var(--fieldBorderWidth)) calc(var(--textBox-paddingX) - var(--fieldBorderWidth));
 
   --titleFontSize: var(--fontSize-l);
   --titleFontWeight: 600;
@@ -73,9 +78,9 @@ body {
   color: inherit;
   appearance: none;
   border: 0;
-  padding: var(--textBox-padding);
+  padding: var(--textBox-padding-button);
   background-color: transparent;
-  border: 1px solid var(--color-grey4);
+  border: var(--buttonBorderWidth) solid var(--color-grey4);
   border-radius: var(--radius-m);
   cursor: pointer;
   white-space: nowrap;
@@ -98,8 +103,8 @@ body {
   font-size: var(--globalFontSize);
   font-family: inherit;
   color: inherit;
-  padding: var(--textBox-padding);
-  border: 2px solid var(--color-formFieldBorder);
+  padding: var(--textBox-padding-field);
+  border: var(--fieldBorderWidth) solid var(--color-formFieldBorder);
   border-radius: var(--radius-m);
   width: 100%;
   background-color: transparent;
@@ -121,8 +126,8 @@ body {
   font-size: var(--globalFontSize);
   font-family: inherit;
   color: inherit;
-  padding: var(--textBox-padding);
-  border: 2px solid var(--color-formFieldBorder);
+  padding: var(--textBox-padding-field);
+  border: var(--fieldBorderWidth) solid var(--color-formFieldBorder);
   border-radius: var(--radius-m);
   width: 100%;
   background-color: transparent;
@@ -146,7 +151,7 @@ body {
   display: block;
   position: absolute;
   right: 1.2em;
-  top: 1.1em;
+  top: 0.9em;
   transform: rotate(45deg);
   border: solid var(--color-body);
   border-width: 0 2px 2px 0;
