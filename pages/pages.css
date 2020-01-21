@@ -2,6 +2,7 @@
   --foldersGridColumns: repeat(2, 1fr);
   --videosGridColumns:  repeat(4, 1fr);
   --mainSidebarDisplay: unset;
+  --pagePadding: calc(1rem + 3vw);
 }
 
 @media (max-width: 800px) {
@@ -14,6 +15,30 @@
 
 body {
   margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--fontSize-2xl);
+  margin: 0 0 var(--space-m) 0;
+}
+
+h2 {
+  font-size: var(--fontSize-xl);
+  margin: var(--space-m) 0;
+}
+
+h3 {
+  font-size: var(--fontSize-l);
+  margin: var(--space-l) 0 var(--space-m) 0;
+}
+
+h4 {
+  font-size: var(--fontSize-m);
+  margin: var(--space-l) 0 var(--space-s) 0;
 }
 
 .globalContainer {
@@ -66,7 +91,7 @@ body {
   background-color: var(--color-grey2);
 }
 
-.pageTitle {
+.dahsboardTitle {
   font-size: var(--fontSize-l);
   font-weight: 600;
 }
