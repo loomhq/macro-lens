@@ -63,7 +63,7 @@ body {
 }
 
 .menuItem.active {
-  background-color: #eee;
+  background-color: var(--color-grey2);
 }
 
 .pageTitle {
