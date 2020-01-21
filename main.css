@@ -11,7 +11,7 @@
 
   --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
   --globalFontSize: var(--fontSize-m);
-  --globalFontFamily: sans-serif;
+  --globalFontFamily: inter, system-ui, sans-serif;
 
   --u: calc(0.5vw + 0.5rem);
   --uInc: calc(1.2rem - 0.3vw);

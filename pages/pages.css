@@ -119,3 +119,67 @@ body {
 .dashboardModal.open {
   display: flex;
 }
+
+.videoContainer {
+  --videoWidth: 56rem;
+
+  max-width: var(--videoWidth);
+  margin: 0 auto;
+  padding-top: var(--space-l);
+  padding-bottom: var(--space-xl);
+  padding-left: var(--pagePadding);
+  padding-right: var(--pagePadding);
+}
+
+.videoPlayer {
+  background-color: #ddd;
+  padding-top: 62.5%;
+  margin-bottom: var(--space-m);
+}
+
+.videoTitle {
+  font-size: var(--fontSize-2xl);
+  margin-bottom: var(--space-s);
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: calc(var(--u) * 3);
+  height: calc(var(--u) * 3);
+  background-color: #999;
+  border-radius: 3rem;
+}
+
+.metaSection {
+  margin-left: var(--space-s);
+}
+
+.videoDate {
+  color: var(--color-grey5);
+}
+
+.commentsSection {
+  border: 2px solid var(--color-grey2 );
+  padding: var(--space-s);
+  margin-top: var(--space-m);
+}
+
+.commentBox {
+  height: 6rem;
+  border: 2px solid var(--color-formFieldBorder);
+  border-radius: var(--radius-m);
+}
+
+.commentActions {
+  display: flex;
+  margin-top: var(--space-xs);
+}
+
+.commentActions button:first-child {
+  margin-left: auto;
+  margin-right: var(--space-xs);
+}
