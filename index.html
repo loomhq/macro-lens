@@ -1,0 +1,162 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="shared.css">
+  </head>
+  <body>
+
+    <div class="pageSection headerSection">
+
+      <h1 class="pageTitle">Macro Lens <span>— Lens system oversimplified</span></h1>
+      
+      <div>
+        <p class="pageDescription">Macro is an experiment that explores a simpler version of Lens. Macro is designed in the browser and uses advantages like relative units.</p>
+
+        <div class="featuresSection">
+          <p><strong>Principles</strong></p>
+          <ul>
+            <li>Declarative over imperative.</li>
+            <li>By default use native HTML components (like <code>select</code>).</li>
+            <li>Use relative units like <code>rem</code> and <code>vw</code> instead of <code>px</code>.</li>
+          </ul>
+          <p><strong>Features</strong></p>
+          <ul>
+            <li>Built with pure CSS.</li>
+            <li>Dynamic base unit value, instead of <code>8px</code> or <code>0.5rem</code>, the unit is <code>calc(0.5vw + 0.5rem)</code>, this value is relative to the window size.</li>
+            <li>Dynamic type: the type sizes are relative to the window, the sizes will shrink/grow with the browser.</li>
+            <li>Dynamic spacing: the base unit is relative to the window, the spacing will shrink/grow with the browser.</li>
+            <li>New <code>--textBox-padding</code> variable used to define the padding of buttons, inputs and other similar elements.</li>
+            <li>Less code: this version has 221 lines of CSS.</li>
+          </ul>
+          <p><strong>Pages built with Macro</strong></p>
+          <ul>
+            <li><a class="link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pageSection">
+      <div class="mainSections">
+      
+        <div class="variablesSection">
+          <h2>Variables</h2>
+  
+          <div class="demoSection">
+            <h3>Typography</h3>
+          
+            <div class="demoTextSize-2xl">Size 2xl</div>
+            <div class="demoTextSize-xl">Size xl</div>
+            <div class="demoTextSize-l">Size l</div>
+            <div class="demoTextSize-m">Size m</div>
+            <div class="demoTextSize-s">Size s</div>
+          </div>
+  
+  
+          <div class="demoSection">
+            <h3>Spacing</h3>
+          
+            <div class="demoSpace demoSpace-xs"></div>
+            <div class="demoSpace demoSpace-s"></div>
+            <div class="demoSpace demoSpace-m"></div>
+            <div class="demoSpace demoSpace-l"></div>
+            <div class="demoSpace demoSpace-xl"></div>
+          </div>
+  
+          <div class="demoSection">
+            <h3>Radii</h3>
+          
+            <div class="demoRadius demoRadius-m"></div>
+            <div class="demoRadius demoRadius-l"></div>
+          </div>
+  
+          <h2>Pages</h2>
+  
+          <a href="dashboard.html" class="link">Dashboard</a>
+        </div>
+        <div class="componentsSection">
+          <h2>Components</h2>
+  
+          <div class="demoSection">
+            <h3>Button</h3>
+          
+            <button class="button button-accent">Button</button>
+            <button class="button">Button</button>
+            <div class="mt-xs"></div>
+            <button class="button button-accent button-l">Button</button>
+            <button class="button button-l">Button</button>
+          </div>
+          
+          <div class="demoSection">
+            <h3>TextInput</h3>
+          
+            <input type="text" class="textInput">
+          </div>
+          
+          <div class="demoSection">
+            <h3>Select</h3>
+          
+            <div class="selectWrapper">
+              <span class="selectIcon"></span>
+              <select class="select">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="demoSection">
+            <h3>FormField</h3>
+          
+            <div class="formField">
+              <label for="demoField" class="formFieldLabel">Email</label>
+              <input id="demoField" type="text" class="textInput" placeholder="info@example.com">
+            </div>
+          </div>
+          
+          <div class="demoSection">
+            <h3>Switch</h3>
+          
+            <label class="switchWrapper">
+              <input class="switchCheckbox" type="checkbox" id="demoSwitch">
+              <span class="switchTrack">
+                <span class="switchKnob"></span>
+              </span>
+            </label>
+          </div>
+          
+          <div class="demoSection">
+            <h3>Link</h3>
+          
+            <a href="" class="link">Take me Home</a>
+          </div>
+          
+          <div class="demoSection">
+            <h3>Modal</h3>
+          
+            <div class="modalCard">
+              <div class="modalTitle">
+                Audio Signals
+              </div>
+  
+              Clouds is focused on the realtime granularization of incoming audio signals, and their transformation into amorphous textures.
+  
+              <div class="modalActions">
+                <button class="button">Confirm</button>
+                <button class="button button-accent">Confirm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    
+  </body>
+</html>

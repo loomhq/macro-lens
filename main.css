@@ -1,0 +1,221 @@
+:root {
+  --lineHeightFixedAmount: 0.4rem;
+  --lineHeightRelativeAmount: 1em;
+  --sizesIncrement: 1.26;
+
+  --fontSize-2xl: calc(var(--fontSize-xl) * var(--sizesIncrement));
+  --fontSize-xl: calc(var(--fontSize-l) * var(--sizesIncrement));
+  --fontSize-l: calc(var(--fontSize-m) * var(--sizesIncrement));
+  --fontSize-m: calc(var(--fontSize-s) * var(--sizesIncrement));
+  --fontSize-s: calc(0.175vw + 0.6rem);
+
+  --globalLineHeight: calc(var(--lineHeightFixedAmount) + var(--lineHeightRelativeAmount));
+  --globalFontSize: var(--fontSize-m);
+  --globalFontFamily: sans-serif;
+
+  --u: calc(0.5vw + 0.5rem);
+  --uInc: calc(1.2rem - 0.3vw);
+
+  --space-xs: calc(var(--u) / 2);
+  --space-s: var(--u);
+  --space-m: calc(var(--u) * 2);
+  --space-l: calc(var(--u) * 4);
+  --space-xl: calc(var(--u) * 8);
+  
+  --radius-m: calc(var(--u) / 4);
+  --radius-l: calc(var(--u) / 2);
+
+  --color-grey8: hsla(230,11%,19%,1);
+  --color-grey7: hsla(230,10%,30%,1);
+  --color-grey6: hsla(230,9%,45%,1);
+  --color-grey5: hsla(230,8%,60%,1);
+  --color-grey4: hsla(230,7%,75%,1);
+  --color-grey3: hsla(230,7%,84%,1);
+  --color-grey2: hsla(230,7%,92%,1);
+  --color-grey1: hsla(230,7%,97%,1);
+
+  --color-body: var(--color-grey8);
+  --color-accent: hsla(230,84%,63%,1);
+  --color-focusRing: hsla(230,84%,63%,0.5);
+  --color-formFieldBorder: hsla(230,7%,84%,1);
+  --color-green: #2AE584;
+
+  --textBox-padding: 0.65em 0.95em;
+
+  --titleFontSize: var(--fontSize-l);
+  --titleFontWeight: 600;
+}
+
+* {
+  line-height: var(--globalLineHeight);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: var(--globalFontSize);
+  font-family: var(--globalFontFamily);
+  color: var(--color-body);
+}
+
+.button {
+  font-size: var(--globalFontSize);
+  font-weight: 600;
+  font-family: inherit;
+  color: inherit;
+  appearance: none;
+  border: 0;
+  padding: var(--textBox-padding);
+  background-color: transparent;
+  border: 1px solid var(--color-grey4);
+  border-radius: var(--radius-m);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--color-focusRing);
+}
+
+.button-l { font-size: var(--fontSize-l) }
+
+.button-accent {
+  background-color: var(--color-accent);
+  border-color: transparent;
+  color: white;
+}
+
+.textInput {
+  font-size: var(--globalFontSize);
+  font-family: inherit;
+  color: inherit;
+  padding: var(--textBox-padding);
+  border: 2px solid var(--color-formFieldBorder);
+  border-radius: var(--radius-m);
+  width: 100%;
+  background-color: transparent;
+}
+
+.textInput:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.formFieldLabel {
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.select {
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: var(--globalFontSize);
+  font-family: inherit;
+  color: inherit;
+  padding: var(--textBox-padding);
+  border: 2px solid var(--color-formFieldBorder);
+  border-radius: var(--radius-m);
+  width: 100%;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selectIcon {
+  width: 0.6rem;
+  height: 0.6rem;
+  display: block;
+  position: absolute;
+  right: 1.2em;
+  top: 1rem;
+  transform: rotate(45deg);
+  border: solid var(--color-body);
+  border-width: 0 2px 2px 0;
+  pointer-events: none;
+}
+
+.switchTrack {
+  --switchHeight: calc(var(--uInc) * 1.5);
+  --switchWidth: calc(var(--switchHeight) * 1.75);
+  --knobOffset: calc(var(--switchHeight) / 10);
+  --knobSize: calc(var(--switchHeight) - (var(--knobOffset) * 2));
+
+  background-color: var(--color-grey4);
+  width: var(--switchWidth);
+  height: var(--switchHeight);
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--switchHeight);
+  transition: background-color 0.2s;
+}
+
+.switchCheckbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.switchCheckbox:checked ~ .switchTrack {
+  background-color: var(--color-green);
+}
+
+.switchCheckbox:checked ~ .switchTrack .switchKnob {
+  transform: translateX(calc(var(--switchWidth) - var(--knobSize) - var(--knobOffset)*2));
+}
+
+.switchKnob {
+  height: var(--knobSize);
+  width: var(--knobSize);
+  position: relative;
+  left: var(--knobOffset);
+  background-color: white;
+  display: block;
+  transition: transform 0.2s;
+  border-radius: var(--switchHeight);
+}
+
+.modalCard {
+  max-width: calc(var(--u) * 32);
+  width: 100%;
+  box-shadow: 0 1rem 3rem hsla(0,0%,0%,0.1);
+  padding: var(--space-m);
+  border-radius: var(--radius-l);
+  background-color: white;
+}
+
+.modalTitle {
+  font-size: var(--titleFontSize);
+  font-weight: var(--titleFontWeight);
+  margin-bottom: var(--space-s);
+}
+
+.modalActions {
+  margin-top: var(--space-m);
+  display: flex;
+  justify-content: space-between;
+}
+
+.link {
+  text-underline-position: under;
+  color: var(--color-accent);
+}

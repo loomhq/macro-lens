@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="shared.css">
+  </head>
+  <body>
+
+    <section class="globalContainer">
+      <aside class="mainSidebar">
+        <div class="menuItem">My videos</div>
+        <div class="menuItem active">Team videos</div>
+        <div class="menuItem">Settings</div>
+        <div class="menuItem">Something</div>
+      </aside>
+      <main class="mainSection">
+        <div class="pageTitleSection">
+          <div class="pageTitle">Built with Macro Lens</div>
+
+          <div class="pageActions">
+
+            
+            <button class="button button-accent" onclick="openModal()">Knock Knock</button>
+            <div class="dashboardModal" onclick="closeModal()">
+              <div class="modalCard">
+                <div class="modalTitle">
+                  Delete Everything?
+                </div>
+    
+                Clouds is focused on the realtime granularization of incoming audio signals, and their transformation into amorphous textures.
+
+                <div style="height: var(--space-s);"></div>
+                
+                <div class="formField">
+                  <label for="demoField" class="formFieldLabel">Can't type this</label>
+                  <input id="demoField" type="text" class="textInput" placeholder="info@example.com">
+                </div>
+    
+                <div class="modalActions">
+                  <button class="button">Cancel</button>
+                  <button class="button button-accent">Yes Delete</button>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+
+        </div>
+        
+        <h4>Folders</h4>
+
+        <div class="foldersGrid">          
+          <div class="folderCard">
+            <div class="folderTitle">Clouds is focused on the realtime</div>
+            <div class="folderDetails">Last edited 1h ago</div>
+          </div>
+          <div class="folderCard">
+            <div class="folderTitle">Granularization of incoming</div>
+            <div class="folderDetails">Last edited 1h ago</div>
+          </div>
+          <div class="folderCard">
+            <div class="folderTitle">Audio signals</div>
+            <div class="folderDetails">Last edited 1h ago</div>
+          </div>
+          <div class="folderCard">
+            <div class="folderTitle">Transformation into amorphous textures</div>
+            <div class="folderDetails">Last edited 1h ago</div>
+          </div>
+        </div>
+
+        <h4>Videos</h4>
+
+        <div class="videosGrid">
+          <div class="videoCard"></div>
+          <div class="videoCard"></div>
+          <div class="videoCard"></div>
+          <div class="videoCard"></div>
+        </div>
+          
+      </main>
+    </section>
+
+    <script>
+
+      const openModal = () => {
+        document.querySelector('.dashboardModal').classList.add('open')
+      }
+      const closeModal = () => {
+        document.querySelector('.dashboardModal').classList.remove('open')
+      }
+    </script>
+    
+  </body>
+</html>
