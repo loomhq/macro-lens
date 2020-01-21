@@ -88,8 +88,8 @@ code {
   margin-bottom: var(--space-xs);
 }
 
-.demoRadius-m { width: var(--space-xl); height: var(--space-xl); border-radius: var(--radius-m); }
-.demoRadius-l { width: var(--space-xl); height: var(--space-xl); border-radius: var(--radius-l); }
+.demoRadius-m { width: var(--space-l); height: var(--space-l); border-radius: var(--radius-m); }
+.demoRadius-l { width: var(--space-l); height: var(--space-l); border-radius: var(--radius-l); }
 
 .demoSection {
   margin-bottom: var(--space-m);
