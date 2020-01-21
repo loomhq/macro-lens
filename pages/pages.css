@@ -132,7 +132,7 @@ body {
 }
 
 .videoPlayer {
-  background-color: #ddd;
+  background-color: var(--color-grey3);
   padding-top: 62.5%;
   margin-bottom: var(--space-m);
 }
@@ -150,7 +150,7 @@ body {
 .avatar {
   width: calc(var(--u) * 3);
   height: calc(var(--u) * 3);
-  background-color: #999;
+  background-color: var(--color-grey3);
   border-radius: 3rem;
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 .commentsSection {
-  border: 2px solid var(--color-grey2 );
+  border: 2px solid var(--color-grey2);
   padding: var(--space-s);
   margin-top: var(--space-m);
 }
